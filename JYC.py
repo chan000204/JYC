@@ -49,16 +49,27 @@ st.html('<h1>파이썬의 세계에 오신 것을 환영합니다.</h1>')
 
 # 실시간 주가 확인 앱
 
-import yfinance as yf
-import datetime
+# import yfinance as yf
+# import datetime
 
-st.title("실시간 주가 확인기")
+# st.title("실시간 주가 확인기")
 
-ticker = st.text_input("종목 티커를 입력하세요(예: AAPL, MSFT)", value="AAPL")
-start_date = st.date_input("시작일", datetime.date(2023, 1, 1))
-end_date = st.date_input("종료일", datetime.date.today())
+# ticker = st.text_input("종목 티커를 입력하세요(예: AAPL, MSFT)", value="AAPL")
+# start_date = st.date_input("시작일", datetime.date(2023, 1, 1))
+# end_date = st.date_input("종료일", datetime.date.today())
 
-if st.button("조회"):
-    data = yf.download(ticker, start=start_date, end=end_date)
-    st.line_chart(data['Close'])
+# if st.button("조회"):
+#     data = yf.download(ticker, start=start_date, end=end_date)
+#     st.line_chart(data['Close'])
     
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    '✅파이썬의 세계에 오신것을 환영합니다.'
+with col2:
+    '파이썬의 세계에 오신것을 환영합니다.'
+with col3:
+    '파이썬의 🔥세계에 오신것을 환영합니다.'
+
+st.image('123123.jpg')
