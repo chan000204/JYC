@@ -1,1 +1,2 @@
 streamlit == 1.38.0
+yfinance == 0.2.58
